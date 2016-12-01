@@ -194,7 +194,7 @@ class Main extends PluginBase implements Listener {
 		$inv = $ev->getInventory();
 		if (!$this->isNeChest($inv)) return;
 		if ($this->unlockChest($player,$inv)) {
-			$player->sendMessage(mc::_("§7-=> §5Fechando o enderchest."));
+			$player->sendMessage(mc::_("§aMCPE §8>> §7Ai inchis §5EnderChest-ul."));
 			$this->saveInventory($player,$inv);
 		}
 	}
@@ -208,7 +208,7 @@ class Main extends PluginBase implements Listener {
 			$ev->setCancelled();
 			return;
 		}
-		$player->sendMessage(mc::_("§7-=> §5Abrindo o enderchest."));
+		$player->sendMessage(mc::_("§aMCPE §8>> §7Ai deschis §5EnderChest-ul."));
 		$this->loadInventory($player,$inv);
 	}
 
